@@ -30,12 +30,10 @@ function renderAvatar(user) {
   $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
   if (user.user_pic !== null) {
     $('.layui-nav-img').attr('src', user.user_pic).show()
-    $('.text-avater').hide()
+    $('.text-avatar').hide()
   } else {
     $('.layui-nav-img').hide()
     var first = name[0].toUpperCase()
-    $('.text-avatar').each(function (i, domEle) {
-      $(domEle).html(first).show()
-    })
+    $('.text-avatar').html(first).show()
   }
 }
